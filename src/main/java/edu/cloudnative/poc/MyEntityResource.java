@@ -36,7 +36,7 @@ public class MyEntityResource {
     public MyEntity getSingle(@PathParam Long id) {
     	MyEntity entity = MyEntity.findById(id);
         if (entity == null) {
-            throw new WebApplicationException("Fruit with id of " + id + " does not exist.", 404);
+            throw new WebApplicationException("MyEntity with id of " + id + " does not exist.", 404);
         }
         return entity;
     }
