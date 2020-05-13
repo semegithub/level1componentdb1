@@ -19,7 +19,7 @@ import javax.ws.rs.ext.Provider;
 
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 
-@Path("/")
+@Path("/api")
 @ApplicationScoped
 @Produces("application/json")
 @Consumes("application/json")
@@ -97,6 +97,5 @@ public class MyEntityResource {
                     .entity(Json.createObjectBuilder().add("error", exception.getMessage()).add("code", code).build())
                     .build();
         }
-
     }
 }
